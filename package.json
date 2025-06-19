@@ -31,7 +31,8 @@
   },
   "scripts": {
     "vscode:prepublish": "tsc -p ./",
-    "compile": "tsc -watch"
+    "compile": "tsc -watch",
+    "build": "tsc -p ./"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
