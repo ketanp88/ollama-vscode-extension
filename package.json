@@ -1,0 +1,44 @@
+{
+  "name": "ollama-vscode-extension",
+  "displayName": "Ollama VSCode Extension",
+  "description": "A local AI-powered coding assistant using Ollama",
+  "version": "0.0.1",
+  "publisher": "your-name",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ketanp88/ollama-vscode-extension.git"
+  },
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onCommand:extension.llmEditFile",
+    "onCommand:extension.listFiles"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.llmEditFile",
+        "title": "Edit File with Ollama"
+      },
+      {
+        "command": "extension.listFiles",
+        "title": "List Files in Workspace"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -watch"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/vscode": "^1.87.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
